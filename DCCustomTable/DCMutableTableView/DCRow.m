@@ -12,13 +12,13 @@
 @implementation DCRow
 
 @synthesize cell;
-@synthesize command;
+@synthesize selectorMethod;
 
-- (id) initWithCell:(UITableViewCell *) tableCell command:(NSString *) rowCommand
+- (id) initWithCell:(UITableViewCell *) tableCell command:(SEL) rowCommand
 {
     if ((self = [super init])) {
         self.cell = tableCell;
-        self.command = rowCommand;
+        self.selectorMethod = rowCommand;
     }
     
     return self;
@@ -27,7 +27,6 @@
 - (void) dealloc
 {
     [cell release];
-    [command release];
     [super dealloc];
 }
 

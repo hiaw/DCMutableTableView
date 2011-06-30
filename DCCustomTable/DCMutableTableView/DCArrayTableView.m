@@ -51,7 +51,7 @@
     
     DCSection *theSection = [arrayOfSections objectAtIndex:indexPath.section];
     DCRow *theRow = [theSection.arrayOfRows objectAtIndex:indexPath.row];
-    [self performSelector:NSSelectorFromString(theRow.command)];
+    [self performSelector:theRow.selectorMethod];
 }
 
 @end

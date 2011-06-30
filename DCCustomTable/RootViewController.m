@@ -20,7 +20,7 @@
     DCSection *syncingSection = [self.arrayOfSections objectAtIndex:0];
     [syncingSection.arrayOfRows removeAllObjects];
     
-    DCRow *syncingRow = [[DCRow alloc] initWithCell:syncingCell command:@"cancelSync:"];
+    DCRow *syncingRow = [[DCRow alloc] initWithCell:syncingCell command:@selector(cancelSync:)];
     [syncingSection.arrayOfRows addObject:syncingRow];
     [syncingRow release];
     
@@ -35,7 +35,7 @@
     DCSection *syncingSection = [self.arrayOfSections objectAtIndex:0];
     [syncingSection.arrayOfRows removeAllObjects];
     
-    DCRow *syncNowRow = [[DCRow alloc] initWithCell:syncNowCell command:@"syncNow:"];
+    DCRow *syncNowRow = [[DCRow alloc] initWithCell:syncNowCell command:@selector(syncNow:)];
     [syncingSection.arrayOfRows addObject:syncNowRow];
     [syncNowRow release];
     
@@ -60,16 +60,16 @@
     // Remove the option after it's been purchased.
     DCSection *purchaseSection = [self.arrayOfSections lastObject];
     DCRow *lastRow = [purchaseSection.arrayOfRows objectAtIndex:0];
-    if ([lastRow.command compare:@"getDropboxSyncOption:"] == NSOrderedSame) {
+    if (lastRow.selectorMethod == @selector(getDropboxSyncOption:)) {
         [purchaseSection.arrayOfRows removeObjectAtIndex:0];
         [self.tableView reloadData];
         
         // Add in dropbox options after it's been purchase        
         DCSection *dropboxSection = [[DCSection alloc] initWithHeader:@"Dropbox Setting" footer:@"Enter your Dropbox account information to enable wireless syncing."];
-        DCRow *dropboxUserRow = [[DCRow alloc] initWithCell:dropboxUserName command:@"updateUserNamePassword:"];
+        DCRow *dropboxUserRow = [[DCRow alloc] initWithCell:dropboxUserName command:@selector(updateUserNamePassword:)];
         [dropboxSection.arrayOfRows addObject:dropboxUserRow];
         [dropboxUserRow release]; 
-        DCRow *dropboxPassRow = [[DCRow alloc] initWithCell:dropboxPasswordCell command:@"updateUserNamePassword:"];
+        DCRow *dropboxPassRow = [[DCRow alloc] initWithCell:dropboxPasswordCell command:@selector(updateUserNamePassword:)];
         [dropboxSection.arrayOfRows addObject:dropboxPassRow];
         [dropboxPassRow release]; 
         
@@ -92,7 +92,7 @@
     // Remove the option after it's been purchased.
     DCSection *purchaseSection = [self.arrayOfSections lastObject];
     DCRow *lastRow = [purchaseSection.arrayOfRows lastObject];
-    if ([lastRow.command compare:@"getRemoveAdvertisingOption:"] == NSOrderedSame) {
+    if (lastRow.selectorMethod == @selector(getRemoveAdvertisingOption:)){
         [purchaseSection.arrayOfRows removeLastObject];
         
         // If both options have been purchased. remove section
@@ -110,26 +110,26 @@
     [super viewDidLoad];
     
     DCSection *syncingSection = [[DCSection alloc] init];
-    DCRow *syncNowRow = [[DCRow alloc] initWithCell:syncNowCell command:@"syncNow:"];
+    DCRow *syncNowRow = [[DCRow alloc] initWithCell:syncNowCell command:@selector(syncNow:)];
     [syncingSection.arrayOfRows addObject:syncNowRow];
     [syncNowRow release];
     
     DCSection *manualSection = [[DCSection alloc] initWithHeader:@"Manual" footer:@"Instruction Manuals for using Bibpad."];
-    DCRow *faqRow = [[DCRow alloc] initWithCell:FAQCell command:@"openFAQ:"];
+    DCRow *faqRow = [[DCRow alloc] initWithCell:FAQCell command:@selector(openFAQ:)];
     [manualSection.arrayOfRows addObject:faqRow];
     [faqRow release];
     
     DCSection *donationSection = [[DCSection alloc] initWithHeader:@"Donation" footer:@"If you like Bibpad, feel free to donate."];
-    DCRow *donationRow = [[DCRow alloc] initWithCell:DonateCell command:@"openDonationView:"];
+    DCRow *donationRow = [[DCRow alloc] initWithCell:DonateCell command:@selector(openDonationView:)];
     [donationSection.arrayOfRows addObject:donationRow];
     [donationRow release];    
  
     
     DCSection *purchaseSection = [[DCSection alloc] initWithHeader:@"Purchase Options" footer:@"Purchase additional options for Bibpad."];
-    DCRow *dropSyncRow = [[DCRow alloc] initWithCell:syncOptionCell command:@"getDropboxSyncOption:"];
+    DCRow *dropSyncRow = [[DCRow alloc] initWithCell:syncOptionCell command:@selector(getDropboxSyncOption:)];
     [purchaseSection.arrayOfRows addObject:dropSyncRow];
     [dropSyncRow release];
-    DCRow *removeAdRow = [[DCRow alloc] initWithCell:removeAdCell command:@"getRemoveAdvertisingOption:"];
+    DCRow *removeAdRow = [[DCRow alloc] initWithCell:removeAdCell command:@selector(getRemoveAdvertisingOption:)];
     [purchaseSection.arrayOfRows addObject:removeAdRow];
     [removeAdRow release];
     

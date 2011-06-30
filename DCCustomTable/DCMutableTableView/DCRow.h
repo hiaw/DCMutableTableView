@@ -11,13 +11,12 @@
 
 @interface DCRow : NSObject {
     UITableViewCell *cell;
-    NSString *command;
     SEL selectorMethod;
 }
 
 @property (retain, readwrite) UITableViewCell *cell;
-@property (retain, readwrite) NSString *command;
+@property (assign) SEL selectorMethod;
 
-- (id) initWithCell:(UITableViewCell *) tableCell command:(NSString *) rowCommand;
+- (id) initWithCell:(UITableViewCell *) tableCell command:(SEL) rowCommand;
 
 @end
