@@ -62,7 +62,7 @@
 		6AA2ED6D13BC2E26007A1F1E /* DCRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRow.m; sourceTree = "<group>"; };
 		6AA2ED6E13BC2E26007A1F1E /* DCSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSection.h; sourceTree = "<group>"; };
 		6AA2ED6F13BC2E26007A1F1E /* DCSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSection.m; sourceTree = "<group>"; };
-		6AA2ED7013BC2E26007A1F1E /* DCArrayTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DCArrayTableView.h; sourceTree = "<group>"; };
+		6AA2ED7013BC2E26007A1F1E /* DCArrayTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCArrayTableView.h; sourceTree = "<group>"; };
 		6AA2ED7113BC2E26007A1F1E /* DCArrayTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCArrayTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

@@ -11,6 +11,14 @@
 
 @interface RootViewController : DCArrayTableView {
 
+    IBOutlet UITableViewCell *syncNowCell;
+    IBOutlet UITableViewCell *syncingCell;
+    IBOutlet UITableViewCell *dropboxUserName;
+    IBOutlet UITableViewCell *dropboxPasswordCell;
+    IBOutlet UITableViewCell *syncOptionCell;
+    IBOutlet UITableViewCell *removeAdCell;
+    IBOutlet UITableViewCell *FAQCell;
+    IBOutlet UITableViewCell *DonateCell;
 }
 
 
