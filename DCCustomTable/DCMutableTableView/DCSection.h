@@ -19,4 +19,6 @@
 @property (retain, readwrite) NSString *headerString;
 @property (retain, readwrite) NSString *footerString;
 
+- (id) initWithHeader:(NSString *) header footer:(NSString *) footer;
+
 @end
