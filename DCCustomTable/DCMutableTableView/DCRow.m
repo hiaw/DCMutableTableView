@@ -1,17 +1,17 @@
 //
-//  RootViewController.h
+//  DCRow.m
 //  DCCustomTable
 //
 //  Created by Daniel Chong on 29/6/11.
 //  Copyright 2011 Stillpig.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "DCArrayTableView.h"
+#import "DCRow.h"
 
-@interface RootViewController : DCArrayTableView {
 
-}
+@implementation DCRow
 
+@synthesize cell;
+@synthesize command;
 
 @end

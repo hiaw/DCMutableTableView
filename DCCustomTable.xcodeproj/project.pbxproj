@@ -22,6 +22,9 @@
 		6AA2ED4913BBB1C0007A1F1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AA2ED4713BBB1C0007A1F1E /* InfoPlist.strings */; };
 		6AA2ED4C13BBB1C0007A1F1E /* DCCustomTableTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6AA2ED4B13BBB1C0007A1F1E /* DCCustomTableTests.h */; };
 		6AA2ED4E13BBB1C0007A1F1E /* DCCustomTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA2ED4D13BBB1C0007A1F1E /* DCCustomTableTests.m */; };
+		6AA2ED7213BC2E26007A1F1E /* DCRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA2ED6D13BC2E26007A1F1E /* DCRow.m */; };
+		6AA2ED7313BC2E26007A1F1E /* DCSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA2ED6F13BC2E26007A1F1E /* DCSection.m */; };
+		6AA2ED7413BC2E26007A1F1E /* DCArrayTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA2ED7113BC2E26007A1F1E /* DCArrayTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +42,28 @@
 		6AA2ED1E13BBB1C0007A1F1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6AA2ED2013BBB1C0007A1F1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6AA2ED2213BBB1C0007A1F1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6AA2ED2613BBB1C0007A1F1E /* DCCustomTable-Info.plist */ = {isa = PBXFileReference; path = "DCCustomTable-Info.plist"; sourceTree = "<group>"; };
+		6AA2ED2613BBB1C0007A1F1E /* DCCustomTable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCCustomTable-Info.plist"; sourceTree = "<group>"; };
 		6AA2ED2813BBB1C0007A1F1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6AA2ED2A13BBB1C0007A1F1E /* DCCustomTable-Prefix.pch */ = {isa = PBXFileReference; path = "DCCustomTable-Prefix.pch"; sourceTree = "<group>"; };
+		6AA2ED2A13BBB1C0007A1F1E /* DCCustomTable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCCustomTable-Prefix.pch"; sourceTree = "<group>"; };
 		6AA2ED2B13BBB1C0007A1F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6AA2ED2D13BBB1C0007A1F1E /* DCCustomTableAppDelegate.h */ = {isa = PBXFileReference; path = DCCustomTableAppDelegate.h; sourceTree = "<group>"; };
+		6AA2ED2D13BBB1C0007A1F1E /* DCCustomTableAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCustomTableAppDelegate.h; sourceTree = "<group>"; };
 		6AA2ED2E13BBB1C0007A1F1E /* DCCustomTableAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCustomTableAppDelegate.m; sourceTree = "<group>"; };
 		6AA2ED3113BBB1C0007A1F1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		6AA2ED3313BBB1C0007A1F1E /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		6AA2ED3313BBB1C0007A1F1E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		6AA2ED3413BBB1C0007A1F1E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		6AA2ED3713BBB1C0007A1F1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		6AA2ED3E13BBB1C0007A1F1E /* DCCustomTableTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCCustomTableTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AA2ED4613BBB1C0007A1F1E /* DCCustomTableTests-Info.plist */ = {isa = PBXFileReference; path = "DCCustomTableTests-Info.plist"; sourceTree = "<group>"; };
+		6AA2ED4613BBB1C0007A1F1E /* DCCustomTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCCustomTableTests-Info.plist"; sourceTree = "<group>"; };
 		6AA2ED4813BBB1C0007A1F1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6AA2ED4A13BBB1C0007A1F1E /* DCCustomTableTests-Prefix.pch */ = {isa = PBXFileReference; path = "DCCustomTableTests-Prefix.pch"; sourceTree = "<group>"; };
+		6AA2ED4A13BBB1C0007A1F1E /* DCCustomTableTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCCustomTableTests-Prefix.pch"; sourceTree = "<group>"; };
 		6AA2ED4B13BBB1C0007A1F1E /* DCCustomTableTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCustomTableTests.h; sourceTree = "<group>"; };
 		6AA2ED4D13BBB1C0007A1F1E /* DCCustomTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCustomTableTests.m; sourceTree = "<group>"; };
+		6AA2ED6C13BC2E26007A1F1E /* DCRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRow.h; sourceTree = "<group>"; };
+		6AA2ED6D13BC2E26007A1F1E /* DCRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRow.m; sourceTree = "<group>"; };
+		6AA2ED6E13BC2E26007A1F1E /* DCSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSection.h; sourceTree = "<group>"; };
+		6AA2ED6F13BC2E26007A1F1E /* DCSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSection.m; sourceTree = "<group>"; };
+		6AA2ED7013BC2E26007A1F1E /* DCArrayTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DCArrayTableView.h; sourceTree = "<group>"; };
+		6AA2ED7113BC2E26007A1F1E /* DCArrayTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCArrayTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +128,7 @@
 				6AA2ED3313BBB1C0007A1F1E /* RootViewController.h */,
 				6AA2ED3413BBB1C0007A1F1E /* RootViewController.m */,
 				6AA2ED3613BBB1C0007A1F1E /* RootViewController.xib */,
+				6AA2ED6B13BC2E26007A1F1E /* DCMutableTableView */,
 				6AA2ED2513BBB1C0007A1F1E /* Supporting Files */,
 			);
 			path = DCCustomTable;
@@ -153,6 +163,19 @@
 				6AA2ED4A13BBB1C0007A1F1E /* DCCustomTableTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AA2ED6B13BC2E26007A1F1E /* DCMutableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				6AA2ED6C13BC2E26007A1F1E /* DCRow.h */,
+				6AA2ED6D13BC2E26007A1F1E /* DCRow.m */,
+				6AA2ED6E13BC2E26007A1F1E /* DCSection.h */,
+				6AA2ED6F13BC2E26007A1F1E /* DCSection.m */,
+				6AA2ED7013BC2E26007A1F1E /* DCArrayTableView.h */,
+				6AA2ED7113BC2E26007A1F1E /* DCArrayTableView.m */,
+			);
+			path = DCMutableTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +289,9 @@
 				6AA2ED2C13BBB1C0007A1F1E /* main.m in Sources */,
 				6AA2ED2F13BBB1C0007A1F1E /* DCCustomTableAppDelegate.m in Sources */,
 				6AA2ED3513BBB1C0007A1F1E /* RootViewController.m in Sources */,
+				6AA2ED7213BC2E26007A1F1E /* DCRow.m in Sources */,
+				6AA2ED7313BC2E26007A1F1E /* DCSection.m in Sources */,
+				6AA2ED7413BC2E26007A1F1E /* DCArrayTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
