@@ -10,7 +10,7 @@
 #import "DCSection.h"
 #import "DCRow.h"
 
-@interface DCArrayTableView : UITableView {
+@interface DCArrayTableView : UITableViewController {
     NSMutableArray *arrayOfSections;
 }
 
