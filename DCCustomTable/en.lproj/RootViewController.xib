@@ -153,7 +153,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 				<reference key="IBUIContentView" ref="683708989"/>
 			</object>
 			<object class="IBUITableViewCell" id="281669413">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">290</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -167,6 +167,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 11}, {104, 21}}</string>
 								<reference key="NSSuperview" ref="601447750"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="855847013"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -185,12 +186,14 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{132, 17}, {150, 9}}</string>
 								<reference key="NSSuperview" ref="601447750"/>
+								<reference key="NSWindow"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</object>
 						<string key="NSFrameSize">{300, 44}</string>
 						<reference key="NSSuperview" ref="281669413"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="978927336"/>
 						<reference key="IBUIBackgroundColor" ref="276213122"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -201,9 +204,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					</object>
 				</object>
 				<string key="NSFrameSize">{300, 44}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="601447750"/>
 				<reference key="IBUIBackgroundColor" ref="321888006"/>
-				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISeparatorStyle">1</int>
 				<reference key="IBUIContentView" ref="601447750"/>

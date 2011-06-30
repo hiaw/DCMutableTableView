@@ -15,6 +15,31 @@
 - (void)syncNow:(id) sender;
 {
     NSLog(@"method name %@", NSStringFromSelector(_cmd));
+    
+    // Replace row with syncingRow
+    DCSection *syncingSection = [self.arrayOfSections objectAtIndex:0];
+    [syncingSection.arrayOfRows removeAllObjects];
+    
+    DCRow *syncingRow = [[DCRow alloc] initWithCell:syncingCell command:@"cancelSync:"];
+    [syncingSection.arrayOfRows addObject:syncingRow];
+    [syncingRow release];
+    
+    [self.tableView reloadData];
+}
+
+- (void) cancelSync:(id) sender;
+{
+    NSLog(@"method name %@", NSStringFromSelector(_cmd));
+    
+    // Replace row with syncNowRow
+    DCSection *syncingSection = [self.arrayOfSections objectAtIndex:0];
+    [syncingSection.arrayOfRows removeAllObjects];
+    
+    DCRow *syncNowRow = [[DCRow alloc] initWithCell:syncNowCell command:@"syncNow:"];
+    [syncingSection.arrayOfRows addObject:syncNowRow];
+    [syncNowRow release];
+    
+    [self.tableView reloadData];
 }
 
 - (void)openFAQ:(id)sender {
@@ -85,9 +110,9 @@
     [super viewDidLoad];
     
     DCSection *syncingSection = [[DCSection alloc] init];
-    DCRow *syncingRow = [[DCRow alloc] initWithCell:syncNowCell command:@"syncNow:"];
-    [syncingSection.arrayOfRows addObject:syncingRow];
-    [syncingRow release];
+    DCRow *syncNowRow = [[DCRow alloc] initWithCell:syncNowCell command:@"syncNow:"];
+    [syncingSection.arrayOfRows addObject:syncNowRow];
+    [syncNowRow release];
     
     DCSection *manualSection = [[DCSection alloc] initWithHeader:@"Manual" footer:@"Instruction Manuals for using Bibpad."];
     DCRow *faqRow = [[DCRow alloc] initWithCell:FAQCell command:@"openFAQ:"];
